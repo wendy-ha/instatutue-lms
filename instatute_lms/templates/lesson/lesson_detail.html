@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div xmlns="http://www.w3.org/1999/html">
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <i class="material-icons circle" style="margin-top: 13px">folder</i>
+                <div style="text-decoration: underline;">
+                    <h5><a href="{% url 'lesson' course.id %}">Course: {{ course.title }}</a></h5>
+                </div>
+
+                <div class="title" style="color: darkblue; text-transform: uppercase;">
+                    <h2>{{lesson.title }}</h2></div>
+                 </br>
+                    <div class="divider"></div>
+                </br>
+                <div >
+                    {{ lesson.description }}
+                    </br>
+                    </br>
+                    <div class="divider"></div>
+                    </br>
+                    {{ lesson.lesson_detail |safe }}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

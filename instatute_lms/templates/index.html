@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block banner %}
+
+<div class="section no-pad-bot" id="index-banner">
+	<div class="container">
+		<br><br>
+		<h2 class="header black-text center">Welcome to Instatute Classroom</h2>
+		<h5 class="header col s12 light center">Explore your learning resources here.</h5>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+{% if teacher_mode == True %}
+        <div class="section">
+	        <h4>My teaching courses</h4>
+	        <div class="divider"></div>
+            </br>
+
+            <div>
+                <div class="card">
+                    <a href="{% url 'newcourse' %}" class="btn-floating btn-large waves-effect waves-light red left">
+                        <i class="material-icons">create_new_folder</i>
+                    </a>
+                </div>
+                <div style="margin-left: 70px; padding-top:2px">
+                    <p><b>Create New Course</b></p>
+                </div>
+            </div>
+            </br>
+	        <div class="divider"></div>
+        </div>
+
+        <div class="row">
+            {% for course in courses_teacher %}
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <a href="{% url 'course' course.id %}"><img class="activator" src="{{ course.picture.url }}"></a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><b>{{ course.title }}</b><i class="material-icons right">more_vert</i></span>
+                            <p class="title"><i class="material-icons left">group</i><b>{{ course.enrolled.count }}</b> Students enrolled</p>
+                            </br>
+                            <a href="{% url 'lesson' course.id %}" class="btn blue small"><i class="material-icons">visibility</i></a>
+                            <a href="{% url 'edit-course' course.id %}" class="btn"><i class="material-icons">edit</i></a>
+                            <a href="{% url 'delete-course' course.id %}" class="btn red"><i class="material-icons">delete</i></a>
+
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+                            <p>{{ course.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+{% endif %}
+
+{% if teacher_mode != True %}
+        <div class="section">
+	        <h4>All enrolled courses</h4>
+	        <div class="divider"></div>
+        </div>
+
+        <div class="row">
+            {% for course in courses_student %}
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ course.picture.url }}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">{{ course.title }}<i class="material-icons right">more_vert</i></span>
+                            </br>
+                            <a href="{% url 'lesson' course.id %}" class="btn blue"><i class="material-icons left">visibility</i>View Detail</a>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+                            <p>{{ course.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+{% endif %}
+
+
+{% endblock %}

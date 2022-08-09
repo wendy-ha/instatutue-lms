@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        
+{% block content %}
+
+<div class="row">
+  <div class="col s7">
+
+
+    <form method="post" enctype="multipart/form-data" action="" role="form">
+      {% csrf_token %}
+    </br>
+        <h4 class="title is-3" style="color: darkblue"><b>CREATE A NEW COURSE</b></h4>
+    </br>
+          <div class="file-field input-field">
+            <div class="btn black">
+              <span>Upload Thumbnail</span>
+              {{ form.picture }}
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+
+          <div class="input-field col s12">
+              <p><b>Course's Title</b></p>
+            {{ form.title }}
+          </div>
+
+          <div class="input-field col s12">
+              <p><b>Course's Description</b></p>
+            {{ form.description }}
+          </div>
+
+          <div class="input-field col s12">
+             <p><b>Semester</b></p>
+            {{ form.category }}
+          </div>
+
+         <div class="input-field col s12">
+              <p><b>Syllabus</b></p>
+            {{ form.syllabus }}
+          </div>
+
+
+      <div class="row">
+        <div class="col s12">
+          <span style="color: red; font-weight: bold;">{{ form.errors }}</span>
+        </div>
+      </div>
+
+
+      <div class="file-field">
+      <p class="control">
+        <button type="submit" value="login" class="btn waves-effect black">
+          Create Course
+        </button>
+      </p>
+    </div>
+
+    </form>
+
+</div>
+</div>
+
+{% endblock %}
