@@ -5,7 +5,7 @@ Instatute, a non-profit education provider, is seeking a solution to transform t
 
 # 1.0 Project Concept Design
 ## 1.1 Web development technologies
-Instatute web application was implemented by employing a wide range of programming languages and software design concepts, which can named a few as table below
+Instatute web application was implemented by employing a wide range of programming languages and software design concepts, which can named a few as table below.
 
 <img width="550" alt="image" src="https://user-images.githubusercontent.com/90888090/189772080-8fa72bad-47be-4972-8c78-36fca8d33ca6.png">
 
