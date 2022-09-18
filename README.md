@@ -30,7 +30,7 @@ Figure below showned that the Course and Lesson models have been registered and 
 <img width="550" alt="image" src="https://user-images.githubusercontent.com/90888090/189772522-88e040d3-b8ca-4b86-a61c-c884a7795c64.png">
 
 ## 2.2 Managing accessible areas between application’s users
-Reflecting explicitly on the Instatute app, after being authenticated and identified as a user of the application through the login process, the user will have access to different resources with different privilege levels depending on whether they are identified as a student or a teacher. Two users, Henry Jackson and Amy Smith, are used as examples to illustrate how to define and restrict access to Instatute's internal resources according to users' roles.!
+Reflecting explicitly on the Instatute app, after being authenticated and identified as a user of the application through the login process, the user will have access to different resources with different privilege levels depending on whether they are identified as a student or a teacher. Two users, Henry Jackson and Amy Smith, are used as examples to illustrate how to define and restrict access to Instatute's internal resources according to users' roles.
 
 <h3> - For Teacher </h3>
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/90888090/189772802-6d6954f9-df87-4187-979f-f72aedfbf489.png">
