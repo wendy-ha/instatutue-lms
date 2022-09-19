@@ -20,7 +20,7 @@ Instatute web application was implemented by employing a wide range of programmi
 
 
 # 2.0 Instatute’s features implementation
-## 2.1 Django Administration!
+## 2.1 Django Administration
 I have utilised it as a model-centric interface for managing data in the Course and Lesson models, which were developed in TEP2022/classroom/models.py and TEP2022/lesson/models.py, respectively.
 
 On the other hand, SQLite3 has been chosen as server-side database for the development of Instatute. Hence, the Django admin site could served as a database administration tool that is incredibly beneficial for testing create, read, update, and delete functions in models.
