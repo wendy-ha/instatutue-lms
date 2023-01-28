@@ -1,5 +1,5 @@
 # Instatute Learning Manangement System (MVP)
-## VIEW LIVE AT: http://instatutelms.pythonanywhere.com/, domain valid until 17/12/2022
+## VIEW LIVE AT: http://instatutelms.pythonanywhere.com/.
 Instatute, a non-profit education provider, is seeking a solution to transform their traditional classroom instruction to an online environment in order to enhance student engagement. However, the company is restrained by two factors: first, its human capital, and second, its internal policies. As a result, Instatute is looking for a technique team to assist them in developing a Learning Management System customised to their unique requirements.
 
 
